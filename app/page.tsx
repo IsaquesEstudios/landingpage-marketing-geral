@@ -11,7 +11,8 @@ import Logo6 from "./../img/thecnoar-automotivo-logo.png";
 import Logo7 from "./../img/ticonnected-logo.png";
 
 import Image from "next/image";
-import Whatsapp from './../img/whatsapp.png'
+import Whatsapp from "./../img/whatsapp.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -20,23 +21,30 @@ export default function Home() {
         style={{
           backgroundImage: `url(${BgImage.src})`,
         }}
-        className="w-full h-screen px-[10%]"
+        className="w-full h-screen px-[10%] bg-no-repeat bg-cover bg-center max-sm:px-[5%] max-sm:h-[80vh] relative"
       >
-        <div className="text-white h-full max-w-[500px] flex flex-col justify-center gap-y-4">
-          <h1 className="text-5xl font-bold">Agência de marketing digital</h1>
+        <div className="text-white h-full max-w-[450px] flex flex-col justify-center gap-y-4 max-sm:max-w-none">
+          <h1 className="text-5xl font-bold max-sm:text-3xl">
+            Agência de marketing digital
+          </h1>
           <p>
             Potencialize sua presença online com nossa agência de marketing
             completa. Conquiste visibilidade e resultados hoje!
           </p>
 
-          <button className="flex items-center justify-center w-80 gap-2 bg-green-700 py-2 rounded-md border-solid border-white border hover:bg-green-600 transition font-semibold ">
-            <FaWhatsapp className="text-xl" />
-            Falar com atendente
+          <button className="cursor-pointer w-80 max-sm:w-full bg-green-700 py-2 rounded-md border-solid border-white border shadow-xl shadow-green-800 hover:bg-green-600 hover:shadow-lg transition font-semibold ">
+            <Link
+              href="https://wa.me/5511982873694"
+              className="flex items-center justify-center gap-2"
+            >
+              <FaWhatsapp className="text-lg" />
+              Falar com atendente
+            </Link>
           </button>
         </div>
       </div>
 
-      <div className="px-[10%] my-10">
+      <div className="px-[10%] my-10 max-sm:px-[5%]">
         <h2 className="text-3xl font-semibold">
           Você está pronto para levar sua presença online para o próximo nível?
         </h2>
@@ -50,8 +58,8 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="bg-[#121212] text-white px-[10%] py-40">
-        <h2 className="text-3xl font-semibold">
+      <div className="bg-[#121212] text-white px-[10%] py-40 max-lg:py-20 max-sm:px-[5%] max-sm:py-10">
+        <h2 className="text-3xl font-semibold max-sm:text-2xl">
           {" "}
           Na era digital em constante evolução, a competição é feroz
         </h2>
@@ -60,7 +68,7 @@ export default function Home() {
           você precisa para alcançar seus objetivos. Aqui está o que oferecemos:
         </p>
 
-        <div className="grid grid-cols-2 mt-20 gap-x-8 gap-y-8">
+        <div className="grid grid-cols-2 mt-20 gap-x-8 gap-y-8 max-lg:grid-cols-1 max-lg:mt-10">
           <Card
             title="Criação de site impecável!"
             text="Sua presença online é a primeira impressão que os clientes em potencial têm da sua marca. Nossa equipe especializada não apenas cria sites visualmente deslumbrantes, mas também os otimiza para desempenho máximo e experiência do usuário excepcional."
@@ -92,35 +100,34 @@ export default function Home() {
         </div>
       </div>
 
-      <h3 className="text-center mt-20 text-3xl font-semibold">
+      <h3 className="text-center mt-20 text-3xl font-semibold max-lg:mx-[10%] max-sm:text-2xl max-sm:mx-[5%]">
         Algumas empresas que confiam no nosso trabalho
       </h3>
-      <div className="flex max-w-[80%] m-auto flex-wrap justify-center items-center gap-20 mb-20 mt-14">
-        <div className="max-w-[200px] w-full">
+      <div className="flex max-w-[80%] m-auto flex-wrap justify-center items-center gap-20 mb-20 mt-14 max-sm:max-w-[90%]">
+        <div className="max-w-[200px] w-full max-sm:max-w-[100px]">
           <Image src={Logo1} alt="logo cliente que trabalha conosco" />
         </div>
-        <div className="max-w-[200px] w-full">
+        <div className="max-w-[200px] w-full max-sm:max-w-[100px]">
           <Image src={Logo2} alt="logo cliente que trabalha conosco" />
         </div>
-        <div className="max-w-[200px] w-full">
+        <div className="max-w-[200px] w-full max-sm:max-w-[100px]">
           <Image src={Logo3} alt="logo cliente que trabalha conosco" />
         </div>
-        <div className="max-w-[200px] w-full">
-          <Image src={Logo4} alt="logo cliente que trabalha conosco" />
-        </div>
-        <div className="max-w-[100px] w-full">
+        <div className="max-w-[100px] w-full max-sm:max-w-[100px]">
           <Image src={Logo5} alt="logo cliente que trabalha conosco" />
         </div>
-        <div className="max-w-[200px] w-full">
+        <div className="max-w-[200px] w-full max-sm:max-w-[100px]">
           <Image src={Logo6} alt="logo cliente que trabalha conosco" />
         </div>
-        <div className="max-w-[200px] w-full">
+        <div className="max-w-[200px] w-full max-sm:max-w-[100px]">
           <Image src={Logo7} alt="logo cliente que trabalha conosco" />
         </div>
       </div>
 
-      <div className="fixed bottom-6 right-6">
-        <Image src={Whatsapp} width={60} height={60} alt="Whatsapp" />
+      <div className="fixed bottom-6 right-6 cursor-pointer">
+        <Link href="https://wa.me/5511982873694">
+          <Image src={Whatsapp} width={60} height={60} alt="Whatsapp" />
+        </Link>
       </div>
 
       <footer className="px-[10%] w-full bg-[#121212] text-white flex justify-between items-center text-xs py-2">
