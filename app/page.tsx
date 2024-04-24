@@ -9,6 +9,7 @@ import Logo4 from "./../img/logo-png-qkitandtd8o9m7lpgea24pg1ixieffi03qw1p8gpa8.
 import Logo5 from "./../img/sim-company-logo.png";
 import Logo6 from "./../img/thecnoar-automotivo-logo.png";
 import Logo7 from "./../img/ticonnected-logo.png";
+import ImgMobile from "./../img/criativos-redes-sociais-arte-para-post-divulgaca-mobile.jpg";
 
 import Image from "next/image";
 import Whatsapp from "./../img/whatsapp.png";
@@ -21,9 +22,32 @@ export default function Home() {
         style={{
           backgroundImage: `url(${BgImage.src})`,
         }}
-        className="w-full h-screen px-[10%] bg-no-repeat bg-cover bg-center max-sm:px-[5%] max-sm:h-[80vh] relative"
+        className="w-full h-screen px-[10%] bg-no-repeat bg-cover bg-center max-sm:px-[5%] max-sm:h-[80vh] max-sm:hidden"
       >
         <div className="text-white h-full max-w-[450px] flex flex-col justify-center gap-y-4 max-sm:max-w-none">
+          <h1 className="text-5xl font-bold max-sm:text-3xl">
+            Agência de marketing digital
+          </h1>
+          <p>
+            Potencialize sua presença online com nossa agência de marketing
+            completa. Conquiste visibilidade e resultados hoje!
+          </p>
+
+          <button className="cursor-pointer w-80 max-sm:w-full bg-green-700 py-2 rounded-md border-solid border-white border shadow-xl shadow-green-800 hover:bg-green-600 hover:shadow-lg transition font-semibold ">
+            <Link
+              href="https://wa.me/5511982873694"
+              className="flex items-center justify-center gap-2"
+            >
+              <FaWhatsapp className="text-lg" />
+              Falar com atendente
+            </Link>
+          </button>
+        </div>
+      </div>
+
+      <div className="sm:hidden bg-[#121212]">
+        <Image src={ImgMobile} alt="image" />
+        <div className="text-white h-full max-w-[450px] flex flex-col justify-center gap-y-4 -mt-40 pb-20 mx-[5%]">
           <h1 className="text-5xl font-bold max-sm:text-3xl">
             Agência de marketing digital
           </h1>
